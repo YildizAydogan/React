@@ -8,11 +8,25 @@ import StyleInline from "./components/07-style-inline";
 import StyleInternal from "./components/08-style-internal";
 import StyleExternal from "./components/09-style-external";
 import Clock1 from "./components/10-clock1";
+import Props from "./components/11-props";
+import Clock2 from "./components/12-clock2";
+
+
+
+
+
+
+
+
+
+
+
+
 
 const App = () =>{
+  
   return (
-    <div className="App">
-   
+    <div className="App"> 
     {/* <HelloWorld/>
     <Comp/>
     <Jsx/>
@@ -21,9 +35,14 @@ const App = () =>{
     <JsxPractise/>
     <StyleInline/>
     <StyleInternal/>  
-    <StyleExternal/>*/}
+    <StyleExternal/>
     <Clock1/>
-    </div>
+    <Props ad="Metin" yas="33"/>
+    <Props ad="Cetin" yas="33"/>*/}
+    <Clock2 color="white" bgColor="gray"/>
+    <Clock2 color="yellow" bgColor="navy"/>
+    <Clock2/>
+   </div>
   );
 }
 

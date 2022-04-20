@@ -1,7 +1,11 @@
 import React from 'react'
 import "../assets/css/10-clock1.css";
 import moment from "moment";
-const Clock1= () => {
+
+
+
+
+const Clock2= (props) => {
 
 const dateTime = moment();
 const dateStr=dateTime.format("LL");
@@ -17,12 +21,21 @@ if (hourStr>=6 && hourStr<11) {
 }else if (hourStr>=17 &&hourStr<21) {
   message="Evening";
   
+}else {
+  message="Night";
+}
+
+
+
+const still = {
+  backgroundColor:props.bgColor,
+  color:props.color
 }
 
 
   return (
 
-    <div className="clock-container">
+    <div className="clock-container" style={still}>
       <div className="time">{timeStr}</div>
       <div>
           <div className="date">{dateStr}</div>
@@ -32,4 +45,4 @@ if (hourStr>=6 && hourStr<11) {
   )
 }
 
-export default Clock1
+export default Clock2
