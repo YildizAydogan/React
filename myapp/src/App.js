@@ -7,6 +7,7 @@ import JsxPractise from "./components/06-jsx-practise";
 import StyleInline from "./components/07-style-inline";
 import StyleInternal from "./components/08-style-internal";
 import StyleExternal from "./components/09-style-external";
+import Clock1 from "./components/10-clock1";
 
 const App = () =>{
   return (
@@ -19,9 +20,9 @@ const App = () =>{
     <JsxLoopp/> 
     <JsxPractise/>
     <StyleInline/>
-    <StyleInternal/>  */}
-    
-    <StyleExternal/>
+    <StyleInternal/>  
+    <StyleExternal/>*/}
+    <Clock1/>
     </div>
   );
 }
