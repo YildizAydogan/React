@@ -1,0 +1,11 @@
+.renkBg{
+background-color: coral;
+padding:2rem;
+text-align:center;
+color:white;
+}
+
+ul li:nth-child(2){
+    
+    color:red;
+}

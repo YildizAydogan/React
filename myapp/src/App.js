@@ -6,6 +6,8 @@ import JsxLoop from "./components/05-jsx-loop";
 import JsxPractise from "./components/06-jsx-practise";
 import StyleInline from "./components/07-style-inline";
 import StyleInternal from "./components/08-style-internal";
+import StyleExternal from "./components/09-style-external";
+
 const App = () =>{
   return (
     <div className="App">
@@ -16,8 +18,10 @@ const App = () =>{
     <Jsx2/>
     <JsxLoopp/> 
     <JsxPractise/>
-    <StyleInline/>*/}
-    <StyleInternal/>
+    <StyleInline/>
+    <StyleInternal/>  */}
+    
+    <StyleExternal/>
     </div>
   );
 }
