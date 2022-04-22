@@ -10,6 +10,8 @@ import StyleExternal from "./components/09-style-external";
 import Clock1 from "./components/10-clock1";
 import Props from "./components/11-props";
 import Clock2 from "./components/12-clock2";
+import Image from "./components/13-image";
+import ImagePractise from "./components/14-image-practise";
 
 
 
@@ -38,10 +40,13 @@ const App = () =>{
     <StyleExternal/>
     <Clock1/>
     <Props ad="Metin" yas="33"/>
-    <Props ad="Cetin" yas="33"/>*/}
+    <Props ad="Cetin" yas="33"/>
     <Clock2 color="white" bgColor="gray"/>
     <Clock2 color="yellow" bgColor="navy"/>
     <Clock2/>
+    <Image/>*/}
+    <ImagePractise/>
+
    </div>
   );
 }
