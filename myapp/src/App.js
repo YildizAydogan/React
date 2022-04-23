@@ -12,6 +12,7 @@ import Props from "./components/11-props";
 import Clock2 from "./components/12-clock2";
 import Image from "./components/13-image";
 import ImagePractise from "./components/14-image-practise";
+import ProfileCard from "./components/15-profile-card";
 
 
 
@@ -44,8 +45,28 @@ const App = () =>{
     <Clock2 color="white" bgColor="gray"/>
     <Clock2 color="yellow" bgColor="navy"/>
     <Clock2/>
-    <Image/>*/}
-    <ImagePractise/>
+    <Image/>
+    <ImagePractise/>*/}
+
+    
+     <ProfileCard 
+     name="Ali Gel" 
+     location="Istanbul, tr" 
+     avatar="pexels-adrienn-1542085.jpg" 
+     shot="4" 
+     followers="4525" 
+     followings="50"
+     />
+
+
+
+
+
+
+
+
+
+
 
    </div>
   );
