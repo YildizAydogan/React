@@ -1,5 +1,6 @@
 import React from 'react'
 import Facility from './facility'
+
 const Facilities = () => {
   return (
     <div className="container-fluid pt-5">
