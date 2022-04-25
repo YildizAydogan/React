@@ -15,6 +15,7 @@ import ImagePractise from "./components/14-image-practise";
 import ProfileCard from "./components/15-profile-card";
 import BootstrapStatic from "./components/16-bootstrap-static";
 import BootstrapDinamik from "./components/17-bootstrap-dynamic";
+import Shop from "./components/18-bootstrap-practise/shop";
 
 
 
@@ -61,9 +62,11 @@ const App = () =>{
      />
 
 
-     <BootstrapStatic/>*/}
-     <BootstrapDinamik/>
+     <BootstrapStatic/>
+     <BootstrapDinamik/>*/}
 
+     
+      <Shop/>
 
 
 
