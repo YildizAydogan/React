@@ -5,6 +5,11 @@ import Header from './components/Header/header';
 import Facilities from './components/facilities/facilities';
 import About from './components/aboutstart/about';
 import Class from './components/Class/class';
+import Register from './components/Registration/register';
+import Team from './components/Team/team';
+import Testimonial from './components/Testimonial/testimonial';
+import Blog from './components/Blog/blog';
+import Footer from './components/Footer/footer';
 
 
 
@@ -12,7 +17,6 @@ import Class from './components/Class/class';
 
 
 function App() {
-
   return (
     <>
     <Navbar/>
@@ -20,8 +24,11 @@ function App() {
     <Facilities/>
     <About/>
     <Class/>
-
-
+    <Register/>
+    <Team/>
+    <Testimonial/>
+    <Blog/>
+    <Footer/> 
 
 
 
