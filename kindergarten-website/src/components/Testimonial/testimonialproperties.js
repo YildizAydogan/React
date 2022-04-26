@@ -12,7 +12,7 @@ const TestimonialProperties = (props) => {
           {props.text}
          </div>
     <div className="d-flex align-items-center">
-        <img className="rounded-circle" src={image} style={{width: 70, height: 70}} alt=""/>
+        <img className="rounded-circle" src={image} style={{width: "70px", height: "70px"}} alt=""/>
         <div className="pl-3">
             <h5>{props.name}</h5>
             <i>{props.degree}</i>

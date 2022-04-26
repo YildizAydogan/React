@@ -5,7 +5,7 @@ const Facility = (props) => {
   return (
   <>
     <div className="col-lg-4 col-md-6 pb-1">
-                <div className="d-flex bg-light shadow-sm border-top rounded mb-4" style={{padding: 30}}>
+                <div className="d-flex bg-light shadow-sm border-top rounded mb-4" style={{padding: '30px'}}>
                     <i className={`flaticon-${props.icon} h1 font-weight-normal text-primary mb-3`}></i>
                     <div className="pl-4">
                         <h4>{props.title}</h4>

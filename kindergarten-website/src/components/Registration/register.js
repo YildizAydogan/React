@@ -34,7 +34,7 @@ const Register = () => {
                                     <input type="email" className="form-control border-0 p-4" placeholder="Your Email" required="required" />
                                 </div>
                                 <div className="form-group">
-                                    <select className="custom-select border-0 px-4" style={{height: 47}}>
+                                    <select className="custom-select border-0 px-4" style={{height: "47px"}}>
                                         <option selected>Select A class</option>
                                         <option value="1">class 1</option>
                                         <option value="2">class 1</option>

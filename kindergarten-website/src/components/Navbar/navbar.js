@@ -6,7 +6,7 @@ const Navbar = () => {
       <>
      <div className="container-fluid bg-light position-relative shadow">
         <nav className="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0 px-lg-5" >
-            <a href="" className="navbar-brand font-weight-bold text-secondary" style={{fontSize: 50}}>
+            <a href="" className="navbar-brand font-weight-bold text-secondary" style={{fontSize: "50px"}}>
                 <i className="flaticon-043-teddy-bear"></i>
                 <span className="text-primary">KidKinder</span>
             </a>
