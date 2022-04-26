@@ -1,11 +1,14 @@
 
+
 import { Alert } from 'react-bootstrap';
 import React from "react";
 
 const BootstrapDinamik = () => {
+  let isVisible = false;
+
   return (
     <>
-      <Alert variant="success">
+      <Alert variant="success" show={isVisible}>
         <Alert.Heading>Hey, nice to see you</Alert.Heading>
         <p>
           Aww yeah, you successfully read this important alert message. This

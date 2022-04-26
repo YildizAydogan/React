@@ -16,11 +16,11 @@ import ProfileCard from "./components/15-profile-card";
 import BootstrapStatic from "./components/16-bootstrap-static";
 import BootstrapDinamik from "./components/17-bootstrap-dynamic";
 import Shop from "./components/18-bootstrap-practise/shop";
-
-
-
-
-
+import Footera from "./components/bootstrap-practise/footer";
+import State from "./components/19-state";
+import Stateless from "./components/19-stateless";
+import Counter from "./components/20-counter";
+import Birthday from "./components/22-birthday/birthday";
 
 
 
@@ -58,22 +58,24 @@ const App = () =>{
      avatar="pexels-adrienn-1542085.jpg" 
      shot="4" 
      followers="4525" 
-     followings="50"
-     />
-
+     followings="50"/>
+     
 
      <BootstrapStatic/>
-     <BootstrapDinamik/>*/}
-
-     
-      <Shop/>
-
+     <BootstrapDinamik/>  
+     <Shop/>
+     <Footera/>
 
 
+      <Stateless/>
+      <State/>
+      <Counter/>*/}
+
+      <Birthday/>
 
 
 
-   </div>
+       </div>
   );
 }
 
