@@ -24,6 +24,8 @@ import Birthday from "./components/22-birthday/birthday";
 import UseEffect1 from "./components/22-useEffect";
 import Clock3 from "./components/23-clock-3";
 import UseEffect3 from "./components/24-useeffect";
+import RandomImage2 from "./components/26-random-image-2";
+import RandomImage from "./components/25-random-image";
 
 
 
@@ -79,11 +81,12 @@ const App = () =>{
       
       <UseEffect/>
 
-     <Clock3/>*/}
+     <Clock3/>
 
      <UseEffect3/>
-
-
+     <RandomImage/>
+     <RandomImage2/>
+*/}
 
        </div>
   );
