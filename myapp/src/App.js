@@ -21,8 +21,10 @@ import State from "./components/19-state";
 import Stateless from "./components/19-stateless";
 import Counter from "./components/20-counter";
 import Birthday from "./components/22-birthday/birthday";
-import Hg from "./components/23-hg";
-import UseEffect from "./components/22-useEffect";
+import UseEffect1 from "./components/22-useEffect";
+import Clock3 from "./components/23-clock-3";
+import UseEffect3 from "./components/24-useeffect";
+
 
 
 
@@ -72,12 +74,16 @@ const App = () =>{
       <Stateless/>
       <State/>
       <Counter/>
-<Birthday/>
+      <Birthday/>
+            
       
+      <UseEffect/>
 
-      <Hg/>*/}
+     <Clock3/>*/}
 
-<UseEffect/>
+     <UseEffect3/>
+
+
 
        </div>
   );

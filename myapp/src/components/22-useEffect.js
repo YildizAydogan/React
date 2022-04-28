@@ -1,13 +1,13 @@
 import React, {useEffect, useState} from 'react'
 import { Button } from 'react-bootstrap';
 
-const UseEffect = () => {
+const UseEffect1 = () => {
     const [message, setMessage] = useState("");
 
-    console.log("Bu satır her state güncellemesinde çalışır.")
+    console.log("Bu satir her state güncellemesinde çalişir.")
 
     useEffect( ()=> {
-        console.log("Bu satır sadece componnet ilk yüklendiğinde çalışır.")
+        console.log("Bu satir sadece componnet ilk yüklendiğinde çalişir.")
     },[]);
 
   return (
@@ -20,4 +20,4 @@ const UseEffect = () => {
   )
 }
 
-export default UseEffect
+export default UseEffect1

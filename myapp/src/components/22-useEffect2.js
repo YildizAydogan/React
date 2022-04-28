@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react'
 import { Button } from 'react-bootstrap';
 
 
-const UseEffect = () => {
+const UseEffect2 = () => {
     const [message, setMessage] = useState("");
     const [test, setTest] = useState("");
 
@@ -33,4 +33,4 @@ const UseEffect = () => {
   )
 }
 
-export default UseEffect
+export default UseEffect2
