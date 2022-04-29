@@ -1,14 +1,14 @@
 import React from 'react'
-import { Button, Card, Col } from 'react-bootstrap'
+import { Card, Col } from 'react-bootstrap'
 
-const UserCard = ({image, userName, url}) => {
-  
-  return (
+const UserCard = ({ data }) => {
+  const {avatar_url, login, html_url} = data;
+  return ( 
     <Col md={3}>
          <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={image} />
+            <Card.Img variant="top" src={avatar_url} />
               <Card.Body>
-                  <Card.Title><a href={url} target="_blank">{userName}</a></Card.Title>      
+                  <Card.Title><a href={html_url} target="_blank">{login}</a></Card.Title>      
                </Card.Body>
                </Card>
          </Col>

@@ -27,6 +27,7 @@ import UseEffect3 from "./components/24-useeffect";
 import RandomImage2 from "./components/26-random-image-2";
 import RandomImage from "./components/25-random-image";
 import UserCards from "./components/27-usercards/user-cards";
+import Countries from "./components/28-countries/countries";
 
 
 
@@ -87,11 +88,10 @@ const App = () =>{
      <UseEffect3/>
      <RandomImage/>
      <RandomImage2/>
-*/}
-
-    <UserCards/>
 
 
+    <UserCards/>*/}
+     <Countries/>
 
 
 
