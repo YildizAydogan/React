@@ -31,10 +31,10 @@ const Countries = () => {
       </tr>
     </thead>
     <tbody> 
-         <div className={loading ? "d-block" : "d-none"}>
-              <Spinner animating="border" size="sm" />Loading...</div> 
+         <tr className={loading ? "d-block" : "d-none"}>
+              <Spinner animating="border" size="sm" />Loading...</tr> 
         {
-        countries.map((country, index)=> <Country key={index} data={country} index={index}/>)
+        countries.map((country, index)=> <Country key={index} data={country} index={index+1}/>)
         }
    
 
