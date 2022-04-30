@@ -28,7 +28,7 @@ import RandomImage2 from "./components/26-random-image-2";
 import RandomImage from "./components/25-random-image";
 import UserCards from "./components/27-usercards/user-cards";
 import Countries from "./components/28-countries/countries";
-
+import Countries1 from "./components/29-countries"
 
 
 
@@ -90,10 +90,15 @@ const App = () =>{
      <RandomImage2/>
 
 
-    <UserCards/>*/}
-     <Countries/>
+    <UserCards/>
+     <Countries/>*/}
+
+     <Countries1/>
 
 
+
+
+     
 
 
        </div>
