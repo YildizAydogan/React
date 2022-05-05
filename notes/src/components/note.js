@@ -1,20 +1,18 @@
-import React from 'react'
-import { Button, Card } from 'react-bootstrap'
+import React from "react";
+import { Button, Card } from "react-bootstrap";
 
-const Note = ({note}) => {
-    const {id, title, body}= note;
+const Note = ({ note, removeNote }) => {
+  const { id, title, body } = note;
   return (
-    <Card>
-  
-    <Card.Body>
-      <Card.Title>{title}</Card.Title>
-      <Card.Text>
-                 {body}
-      </Card.Text>
-      <Button variant="primary">Sil</Button>
-    </Card.Body>
-  </Card>
-  )
-}
+    <Card className="h-100">
+      <Card.Body>
+        <Card.Title>{title}</Card.Title>
+        <Card.Text>{body}</Card.Text>
+      </Card.Body>
 
-export default Note
+      <Card.Footer><Button variant="primary" onClick={ () => removeNote(id)}>Sil</Button></Card.Footer>
+    </Card>
+  );
+};
+
+export default Note;

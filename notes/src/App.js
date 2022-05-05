@@ -14,30 +14,31 @@ import axios from "axios";
 
    const loadNotes = () => {  
     axios("https://jsonplaceholder.typicode.com/posts")
-     .then(resp => setNotes(resp.data)); 
-    }
+     .then((resp) => setNotes(resp.data)); 
+    };
 
+   const removeNote = (id) => {
+   if (!id) return;
 
+   axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`).then((resp) => console.log(resp));
 
+   }
+  
 
 
 
 
       return (
         <Container>
-         <Row>
-
-        <Col md={3}>
-        <NoteForm/>   
-        </Col>
-
-         <Col md={9}>
-         <Notes data={notes} />  
-        </Col>
-
-        </Row>  
-        </Container>
-          );
-        }
-    
+        <Row>
+          <Col md={3}>
+            <NoteForm />
+          </Col>
+          <Col md={9}>
+            <Notes data={notes} removeNote={removeNote}/>
+          </Col>
+        </Row>
+      </Container>
+    );
+  }
     export default App;
