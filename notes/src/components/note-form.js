@@ -13,12 +13,12 @@ const NoteForm = ({ createNote }) => {
   return (
     <>
       <Form.Group className="mb-3">
-        <Form.Label>Başlık</Form.Label>
+        <Form.Label>Baslik</Form.Label>
         <Form.Control type="text" value={title} onChange={handleTitle} />
       </Form.Group>
 
       <Form.Group className="mb-3">
-        <Form.Label>Açıklama</Form.Label>
+        <Form.Label>Aciklama</Form.Label>
         <Form.Control as="textarea" rows={3} value={desc} onChange={(e)=> setDesc(e.target.value)} />
       </Form.Group>
 
