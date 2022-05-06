@@ -30,6 +30,7 @@ import UserCards from "./components/27-usercards/user-cards";
 import Countries from "./components/28-countries/countries";
 import Countries1 from "./components/29-countries"
 import Form1 from "./components/29-forms/form1";
+import Form2 from "./components/29-forms/form2";
 
 
 
@@ -94,8 +95,9 @@ const App = () =>{
     <UserCards/>
      <Countries/>
 
-     <Countries1/>*/}
-    <Form1/>
+     <Countries1/>
+    <Form1/>*/}
+    <Form2/>
 
 
 
