@@ -29,6 +29,7 @@ import RandomImage from "./components/25-random-image";
 import UserCards from "./components/27-usercards/user-cards";
 import Countries from "./components/28-countries/countries";
 import Countries1 from "./components/29-countries"
+import Form1 from "./components/29-forms/form1";
 
 
 
@@ -91,10 +92,10 @@ const App = () =>{
 
 
     <UserCards/>
-     <Countries/>*/}
+     <Countries/>
 
-     <Countries1/>
-
+     <Countries1/>*/}
+    <Form1/>
 
 
 
