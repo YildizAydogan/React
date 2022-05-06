@@ -31,6 +31,8 @@ import Countries from "./components/28-countries/countries";
 import Countries1 from "./components/29-countries"
 import Form1 from "./components/29-forms/form1";
 import Form2 from "./components/29-forms/form2";
+import Form3 from "./components/29-forms/form3";
+import { Form } from "react-bootstrap";
 
 
 
@@ -96,8 +98,10 @@ const App = () =>{
      <Countries/>
 
      <Countries1/>
-    <Form1/>*/}
+    <Form1/>
     <Form2/>
+    <Form3/>*/}
+    <Form/>
 
 
 
