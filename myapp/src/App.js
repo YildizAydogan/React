@@ -32,9 +32,12 @@ import Countries1 from "./components/29-countries"
 import Form1 from "./components/29-forms/form1";
 import Form2 from "./components/29-forms/form2";
 import Form3 from "./components/29-forms/form3";
-import { Form } from "react-bootstrap";
 import Form4 from "./components/29-forms/form4";
 import Form5 from "./components/29-forms/form5";
+import {BrowserRouter, Routes} from "react-router-dom";
+import Header from "./components/00-header";
+import { Col, Container, Row } from "react-bootstrap";
+import Menu from "./components/00-menu";
 
 
 
@@ -46,7 +49,38 @@ import Form5 from "./components/29-forms/form5";
 const App = () =>{
   
   return (
-    <div className="App"> 
+ 
+    <BrowserRouter>
+      <Header/>
+      <Container fluid>
+        <Row>
+          <Col md={3}><Menu/></Col>
+          <Col md={9}>
+
+              <Routes>
+                 
+                 <Routes path="/hello-world" element={<HelloWorld/>}></Routes>                
+                 <Routes path="/comp" element={<Comp/>}></Routes> 
+                 <Routes path="/jsx" element={<Jsx/>}></Routes> 
+                 <Routes path="/jsx2" element={<Jsx2/>}></Routes> 
+                 <Routes path="/jsx-practise" element={<JsxLoop/>}></Routes> 
+                 <Routes path="/jsx-loop" element={<JsxPractise/>}></Routes> 
+
+              </Routes>
+
+
+
+          </Col>
+        </Row>
+      </Container>
+
+
+
+
+
+
+
+
     {/* <HelloWorld/>
     <Comp/>
     <Jsx/>
@@ -103,15 +137,17 @@ const App = () =>{
     <Form1/>
     <Form2/>
     <Form3/>
-    <Form4/>*/}
-     <Form5/>
+    <Form4/>
+     <Form5/>*/}
+   
 
 
      
+</BrowserRouter>
 
+  
 
-       </div>
-  );
+);
 }
 
 export default App;

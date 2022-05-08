@@ -1,5 +1,5 @@
 const Comp = () => {
-  return ( <div>Bu da farkli bir componentimizdir.   </div>  )
+  return ( <div> Bu da farkli bir componentimizdir.   </div>  )
   
 }
 

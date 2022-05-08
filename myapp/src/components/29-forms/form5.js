@@ -41,7 +41,7 @@ const Form5 = () => {
            <Form.Control type="email"
         {...formik.getFieldProps("email")}
         isInvalid={formik.touched.email && !!formik.errors.email}
-        isValid={!formik.errors.email}
+        isValid={formik.touched.email && !formik.errors.email}
             />
             <Form.Control.Feedback type="invalid">{formik.errors.email}</Form.Control.Feedback>
 
@@ -57,7 +57,7 @@ const Form5 = () => {
          <Form.Control type="password"
       {...formik.getFieldProps("password")}
       isInvalid={formik.touched.password && !!formik.errors.password}
-      isValid={!formik.errors.password}
+      isValid={formik.touched.password && !formik.errors.password}
           />
           <Form.Control.Feedback type="invalid">{formik.errors.password}</Form.Control.Feedback>
       
