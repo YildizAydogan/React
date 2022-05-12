@@ -5,12 +5,12 @@ export const loginSuccess = (user) => ({
     payload: user
 });
 
-export const loginFail = () => {
+export const loginFail = () => ({
     type: types.LOGIN_FAIL
  
-};
+});
 
-export const logOut = () => {
+export const logout = () => ({
     type: types.LOGOUT
    
-};
+});
