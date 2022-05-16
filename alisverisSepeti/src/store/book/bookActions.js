@@ -7,15 +7,15 @@ export const ekle=(book)=> ({
 })
 export const artir=(id)=> ({
     type: types.ARTIR,
-    payload:book
+    payload:id
 })
 
 export const azalt=(id)=> ({
     type: types.AZALT,
-    payload:book
+    payload:id
 })
 
 export const cikar=(id)=> ({
     type: types.CIKAR,
-    payload:book
+    payload:id
 })
