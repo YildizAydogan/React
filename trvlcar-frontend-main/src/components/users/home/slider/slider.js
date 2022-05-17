@@ -1,32 +1,29 @@
-import React from 'react'
-import { Carousel } from 'react-bootstrap'
-import "./slider.css"
-import slides from "./slider.json"
+import React from "react";
+import { Carousel } from "react-bootstrap";
+import "./slider.css";
+import slides from "./slider.json";
+
 const Slider = () => {
   return (
-    <Carousel className="slider">
-        {slides.map((slide, index)=>{
-         let image=require(`../../../../assets/img/slider/${slide.image}`);
-        
-    
-      return  (
-         <Carousel.Item key={index} style={{backgroundImage: `url(${image})`}}>
-         <Carousel.Caption>
-           <h3>F{slide.title}</h3>
-           <p>{slide.desc}</p>
-         </Carousel.Caption>
-       </Carousel.Item>
-        
-        )
-        
-        
-        
-        
-        })}
- 
+    <Carousel fade className="slider">
+      {slides.map((slide, index) => {
 
-       </Carousel>
-  )
-}
+        let image = require(`../../../../assets/img/slider/${slide.image}`);
 
-export default Slider
+        return (
+          <Carousel.Item
+            key={index}
+            style={{ backgroundImage: `url(${image})` }}
+          >
+            <Carousel.Caption>
+              <h3>{slide.title}</h3>
+              <p>{slide.desc}</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        );
+      })}
+    </Carousel>
+  );
+};
+
+export default Slider;

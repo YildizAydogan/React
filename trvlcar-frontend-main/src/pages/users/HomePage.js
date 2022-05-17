@@ -3,11 +3,9 @@ import Slider from '../../components/users/home/slider/slider'
 
 const HomePage = () => {
   return (
-   <>
-   <Slider/>
-   
-   
-   </>
+    <>
+      <Slider/>
+    </>
   )
 }
 
