@@ -4,11 +4,9 @@ import PageHeader from '../../components/users/common/page-header/page-header'
 const AboutPage = () => {
   return (
     <>
-    <PageHeader title="About Us"/>
-    
-    
+      <PageHeader title="About Us"/>
     </>
-      )
+  )
 }
 
 export default AboutPage
