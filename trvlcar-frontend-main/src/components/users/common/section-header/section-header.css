@@ -1,0 +1,29 @@
+.section-header {
+    text-align: center;
+    position: relative;
+}
+.section-header h3{
+     font-weight:600;
+
+
+}
+.section-header span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size:3rem;
+    font-weight:600;
+    opacity: 0.05;
+    transform: translate(-50%, -50%);
+
+}
+
+.section-header span::after{
+content: "";
+background-color:5px solid red;
+width:30px;
+height:20px;
+display: inline-block;
+opacity: 1;
+
+}
