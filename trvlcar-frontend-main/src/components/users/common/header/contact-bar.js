@@ -7,8 +7,7 @@ const ContactBar = () => {
       <li>
         <RiHeadphoneLine />
         <div>
-          <a href="tel:905555555555">(555)-555-5555</a>
-          <br /><a href="tel:905555555555">(555)-555-5555</a>
+        <p>(904)-369-8938 <br />(904)-651-6572</p>
         </div>
       </li>
       <li className="d-none d-lg-flex">
@@ -21,9 +20,7 @@ const ContactBar = () => {
       <li>
         <RiMapPinLine />
         <div>
-          sjkhsdjfhsjkdfhksdf
-          <br />
-          Florida USA
+        Cherry Tree Ct, Jacksonville, <br />32216 Florida USA
         </div>
       </li>
     </ul>
