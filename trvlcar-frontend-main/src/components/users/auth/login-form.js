@@ -1,9 +1,13 @@
 import { useFormik } from "formik";
 import React, { useState } from "react";
 import { Button, Form, Spinner } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 import * as Yup from "yup";
+import { getUser, login } from "../../../api/user-service";
 const LoginForm = () => {
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
   const initialValues = {
     email: "",
     password: "",
@@ -14,6 +18,27 @@ const LoginForm = () => {
   });
   const onSubmit = (values) => {
     setLoading(true);
+    login(values).then( respLogin => {
+      localStorage.setItem("token", respLogin.data.token);
+      getUser().then( respUser=> {
+        console.log(respUser);
+
+        setLoading(false);
+        // MERKEZİ STATE E KULLANICI YERLEŞTİR
+        navigate(-1);
+      })
+      .catch( err=>{
+        console.log(err);
+        toast(err.responce.data.message);
+        setLoading(false);
+      })
+      
+    })
+    .catch( err=>   {
+      console.log(err);
+      toast(err.responce.data.message);
+      setLoading(false);
+    })
   };
   const formik = useFormik({
     initialValues,
