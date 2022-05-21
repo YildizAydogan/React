@@ -5,9 +5,18 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import * as Yup from "yup";
 import { getUser, login } from "../../../api/user-service";
+import { useStore } from "../../../store";
+import { loginSuccess } from "../../../store/user/userActions";
+
+
+
 const LoginForm = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const {dispatchUser} = useStore();
+
+
+
   const initialValues = {
     email: "",
     password: "",
@@ -25,6 +34,7 @@ const LoginForm = () => {
 
         setLoading(false);
         // MERKEZİ STATE E KULLANICI YERLEŞTİR
+        dispatchUser(loginSuccess(respUser.data));
         navigate(-1);
       })
       .catch( err=>{
