@@ -4,7 +4,6 @@ import data from "./whyus.json";
 import "./whyus.css";
 import SectionHeader from "../section-header/section-header";
 
-
 const WhyUs = () => {
   return (
     <section className="whyus">

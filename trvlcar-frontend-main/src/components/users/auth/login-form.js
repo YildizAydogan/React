@@ -8,53 +8,59 @@ import { getUser, login } from "../../../api/user-service";
 import { useStore } from "../../../store";
 import { loginSuccess } from "../../../store/user/userActions";
 
-
-
 const LoginForm = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-  const {dispatchUser} = useStore();
-
+  const { dispatchUser } = useStore();
 
 
   const initialValues = {
     email: "",
     password: "",
   };
+
   const validationSchema = Yup.object({
     email: Yup.string().email().required("Please enter your email"),
     password: Yup.string().required("Please enter your password"),
   });
+
   const onSubmit = (values) => {
+
     setLoading(true);
+
     login(values).then( respLogin => {
+
       localStorage.setItem("token", respLogin.data.token);
+
       getUser().then( respUser=> {
         console.log(respUser);
 
         setLoading(false);
-        // MERKEZİ STATE E KULLANICI YERLEŞTİR
         dispatchUser(loginSuccess(respUser.data));
         navigate(-1);
       })
       .catch( err=>{
         console.log(err);
-        toast(err.responce.data.message);
+        toast(err.response.data.message);
         setLoading(false);
       })
       
     })
     .catch( err=>   {
       console.log(err);
-      toast(err.responce.data.message);
+      toast(err.response.data.message);
       setLoading(false);
     })
+
+
   };
+
   const formik = useFormik({
     initialValues,
     validationSchema,
     onSubmit,
   });
+
   return (
     <Form noValidate onSubmit={formik.handleSubmit}>
       <Form.Group className="mb-3">
@@ -87,4 +93,5 @@ const LoginForm = () => {
     </Form>
   );
 };
+
 export default LoginForm;

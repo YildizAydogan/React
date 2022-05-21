@@ -15,7 +15,7 @@ const AboutPage = () => {
       <Testimonals/>
       <Spacer/>
       <Team/>
-
+      <Spacer/>
     </>
   )
 }

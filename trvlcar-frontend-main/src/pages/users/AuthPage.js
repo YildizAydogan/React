@@ -3,10 +3,7 @@ import Auth from '../../components/users/auth/auth'
 
 const AuthPage = () => {
   return (
-
-        
-           <Auth/>
-
+    <Auth/>
   )
 }
 
