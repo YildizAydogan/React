@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import { getUser } from "./api/user-service";
+import LoadingPage from "./pages/users/LoadingPage";
 import CustomRoutes from "./router/custom-routes";
-import { StoreProvider, useStore } from "./store";
+import { useStore } from "./store";
 import { loginSuccess } from "./store/user/userActions";
 
 const App = () => {
-  const [loading, setLoading] =useState(true);
+  const [loading, setLoading] = useState(true);
   const {dispatchUser} = useStore();
 
   const loadData = async () =>  { 
@@ -26,8 +27,9 @@ const App = () => {
   }, []);
   
 
- 
-
+  if(loading) 
+    return(<LoadingPage/>)
+  else
   return (
     <>
       <CustomRoutes/>
