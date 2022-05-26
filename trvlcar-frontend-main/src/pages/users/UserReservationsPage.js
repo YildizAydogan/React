@@ -8,6 +8,8 @@ const UserReservationsPage = () => {
     <>
         <PageHeader title="Reservations"/>
         <Spacer/>
+        <Reservations/>
+        <Spacer/>
     </>
   )
 }
