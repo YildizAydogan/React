@@ -7,10 +7,7 @@ import VehicleBookingForm from "../../components/users/vehicles/vehicle-booking-
 import VehicleDetails from "../../components/users/vehicles/vehicle-details";
 import { useStore } from "../../store";
 
-
 const VehicleDetailsPage = () => {
-
-
   const { vehicleId } = useParams();
   const { vehicleState, userState } = useStore();
   const { vehicles } = vehicleState;
@@ -18,15 +15,12 @@ const VehicleDetailsPage = () => {
   const { isUserLogin } = userState;
   const navigate = useNavigate();
 
-
   useEffect(() => {
-
     const selectedVehicles = vehicles.filter((item) => item.id == vehicleId);
     if (selectedVehicles.length <= 0) navigate("/vehicle-not-found");
     setSelectedVehicle(selectedVehicles[0]);
   }, []);
 
-  
   if (selectedVehicle)
     return (
       <>
@@ -52,4 +46,5 @@ const VehicleDetailsPage = () => {
       </>
     );
 };
+
 export default VehicleDetailsPage;
