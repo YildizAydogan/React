@@ -6,6 +6,23 @@ const API_URL = process.env.REACT_APP_API_URL;
 const getUsers = () => {
   return axios.get(`${API_URL}/user/auth/all`, { headers: authHeader() });
 };
+const getUser = (id) => {
+  return axios.get(`${API_URL}/user/${id}/auth`, { headers: authHeader() });
+};
+
+const createUser = (user) => {
+  return axios.post(`${API_URL}/add`, user, { headers: authHeader() });
+};
+
+const updateUser = (id, user) => {
+  return axios.put(`${API_URL}/user/${id}/auth`, user, { headers: authHeader() });
+};
+
+const deleteUser = (id) => {
+  return axios.delete(`${API_URL}/user/${id}/auth`, { headers: authHeader() });
+};
+
+
 
 const downloadUsers = () => {
   return axios.get(`${API_URL}/excel/download/users`, {
@@ -18,4 +35,4 @@ const downloadUsers = () => {
   });
 };
 
-export { getUsers, downloadUsers };
+export { getUsers, getUser, createUser, updateUser, deleteUser, downloadUsers };

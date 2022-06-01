@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import {
@@ -10,10 +10,11 @@ import {
   ButtonGroup,
   Alert,
 } from "react-bootstrap";
-
+import { toast } from "react-toastify";
 import MaskedInput from "react-maskedinput";
 import { useNavigate, useParams } from "react-router-dom";
-
+import { deleteUser, getUser, updateUser } from "../../../api/admin-user-service";
+import alertify from "alertifyjs";
 const AdminUserEdit = () => {
   const [initialValues, setInitialValues] = useState({
     firstName: "",
@@ -22,16 +23,17 @@ const AdminUserEdit = () => {
     email: "",
     address: "",
     zipCode: "",
-    username: "",
+    userName: "",
     password: "",
     roles: ["Customer"],
     builtIn: false,
   });
-
+const [loading, setLoading]= useState(true);
   const [saving, setSaving] = useState(false);
   const [deleting, setDeleting] = useState(false);
   const { userId } = useParams();
   const navigate = useNavigate();
+
 
   const validationSchema = Yup.object({
     firstName: Yup.string().required("Please enter your first name"),
@@ -43,18 +45,79 @@ const AdminUserEdit = () => {
     roles: Yup.array().required("Please select a role"),
   });
 
-  const onSubmit = (values) => {
-               
+  const onSubmit =async (values) => {
+    setSaving(true);
+    const data = {...values}; //yukariyla baglantiyi kopardi.
+   if (!data.password) {
+      delete values.password;
+   } 
+    
+    
+    try {
+          await updateUser(userId,values);
+          toast("User was updated successfully");
+        } catch (err) {
+          console.log(err);
+          toast(err.response.data.message);
+        }finally {
+          setSaving(false);
+        }       
   };
 
   const formik = useFormik({
-    enableReinitialize: true,
+    enableReinitialize: true, //kullanici bilgilerini guncelleyebilmemiz icin tekrardan initialize ac demek 
     initialValues,
     validationSchema,
     onSubmit,
   });
 
-  
+  const loadData =async () => {
+    try {
+      const resp=await getUser(userId);
+      setInitialValues(resp.data);
+
+    } catch (err) {
+      console.error(err);
+      toast(err.response.data.message);
+
+    }finally {
+
+      setLoading(false);
+      
+    }
+
+  }
+      const removeUser =async () => {
+        setDeleting(true);
+      try {
+        await deleteUser(userId);
+        toast("User was deleted successfully");
+        navigate(-1);
+      } catch (err) {
+        console.log(err);
+        toast(err.response.data.message);
+      }finally {
+        setDeleting(false);
+      }
+      }
+
+
+
+  const handleDelete = () => {
+     alertify.confirm(
+       "Deleting!!!",
+       "Are you sure you want to delete?",
+     ()=>{
+        removeUser();
+     },
+     ()=>{
+       
+    }
+     )
+  }
+   useEffect(() => {
+    loadData();
+  }, []);
 
  
 
@@ -144,6 +207,9 @@ const AdminUserEdit = () => {
             type="password"
             placeholder="Enter password"
             {...formik.getFieldProps("password")}
+            name="password"
+            value={formik.values.password}
+            onChange={formik.handleChange}
             isInvalid={!!formik.errors.password}
           />
           <Form.Control.Feedback type="invalid">
